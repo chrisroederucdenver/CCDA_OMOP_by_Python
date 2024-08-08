@@ -35,8 +35,8 @@ def cast_string_to_concept_id(args_dict):
 
 def map_oid(codeSystem):
     """ maps an OID used in CCDA to indicate the vocabulary
-	to an OMOP vocabulary_id.
-	FIX: needs the data, needs written
+    to an OMOP vocabulary_id.
+    FIX: needs the data, needs written
     """
     try:
         vocabulary_id = oid_df[oid_df['oid'] == codeSystem].vocabulary_id.iloc[0]
@@ -46,67 +46,47 @@ def map_oid(codeSystem):
         logger.warning(f"no vocab for \"{codeSystem}\" type:{type(e)}")
         return None
 
-
-def map_to_omop_concept_id(vocabulary_id, concept_code):
-    """ Simply maps vocabulary_id, concept_code to an OMOP concept_id.
-	Somewhat redundant in that map_to_standard_omop_concept_id
-	is much more useful and likely to be used.
-    """
-    try:
-        concept_id = concept_df[concept_df['vocabulary_id'] == vocabulary_id]\
-                               [concept_df['concept_code'] == concept_code].concept_id.iloc[0]
-        return concept_id
-    except IndexError as e:
-        logger.warning(f"no concept for \"{vocabulary_id}\" \"{concept_code}\" type:{type(e)}")
-        return None
-
-
-def map_to_omop_domain_id(vocabulary_id, concept_code):
-    """ Simply maps vocabulary_id, concept_code to an OMOP domain_id.
-	FIX: needs the data, needs written.
-	Somewhat redundant in that map_to_standard_omop_concept_id
-	is much more useful and likely to be used.
-	Definitely redudant with the concept_id function and duplicates cpu effort,
-	but fits neatly into the mapping file and keeps the code simple in some respects.
-	The key issue is that these functions return a single value, and to do
-	both concept_id and domain_id would make them return a list, and then you
-	have to know when its a value or a list...
-    """
-    try:
-        domain_id = concept_df[concept_df['vocabulary_id'] == vocabulary_id]\
-                              [concept_df['concept_code'] == concept_code].domain_id.iloc[0]
-        return domain_id
-    except IndexError as e:
-        logger.warning(f"no concept for \"{vocabulary_id}\" \"{concept_code}\" type:{type(e)}")
-        return None
-
-
 def map_to_standard_omop_concept_id(vocabulary_id, concept_code):
     """ Maps vocabulary_id, concept_code to a standard OMOP
-	concept_id by joining through concept_relationship.
-	FIX: needs the data, needs written
+    concept_id by joining through concept_relationship.
+    FIX: needs the data, needs written
     """
     return 2
 
 
-def map_hl7_to_omop(vocabulary_oid, concept_code):
+def map_hl7_to_omop(vocabulary_oid, concept_code, return_col, return_type):
     """ This would map an HL7 vocabulary_oid to an OMOP vocabulary_id,
-	then map both vocabulary_id and concept_code to an OMOP concept_id
+    then map both vocabulary_id and concept_code to an OMOP concept_id
     """
-    vocabulary_id = map_oid(vocabulary_oid)
-    concept_id = map_to_omop_concept_id(vocabulary_id, concept_code)
-    # concept_id = map_to_standard_omop_concept_id(vocabulary_id, args_dict['concept_code'])
-    return int(concept_id)
 
 
 def map_hl7_to_omop_w_dict_args(args_dict):
-    """ expects: vocabulary_oid, concept_code
+    """ expects: vocabulary_oid, concept_code, return_col, return_type
+    Simply maps vocabulary_id, concept_code to an OMOP concept_id.
+    Somewhat redundant in that map_to_standard_omop_concept_id
+    is much more useful and likely to be used.
     """
-    return map_hl7_to_omop(args_dict['vocabulary_oid'], args_dict['concept_code'])
+    vocabulary_oid = args_dict['vocabulary_oid']
+    concept_code = args_dict['concept_code']
+    return_col = args_dict['return_col']
+    return_type = args_dict['return_type']
 
+    vocabulary_id = map_oid(vocabulary_oid)
+    try:
+        df = concept_df[(concept_df['vocabulary_id'] == vocabulary_id) &
+                        (concept_df['concept_code'] == concept_code)]
 
-def map_hl7_to_omop_domain_id(args_dict):
-    """ expects: vocabulary_oid, concept_code
-    """
-    vocabulary_id = map_oid(args_dict['vocabulary_oid'])
-    return map_to_omop_domain_id(vocabulary_id, args_dict['concept_code'])
+        if len(df) > 1:
+            logger.warning(
+                f"more than one concept for \"{vocabulary_id}\" \"{concept_code}\"")
+
+        if len(df) < 1:
+            logger.warning(f"no concept for \"{vocabulary_id}\" \"{concept_code}\"")
+
+        concept = df.iloc[0]
+        ret = concept[return_col].astype(return_type)
+        return ret
+
+    except IndexError as e:
+        logger.warning(f"{type(e)} error {e} mapping \"{vocabulary_id}\" \"{concept_code}\"")
+        return None
