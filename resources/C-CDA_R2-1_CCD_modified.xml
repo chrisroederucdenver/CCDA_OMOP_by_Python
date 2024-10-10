@@ -3037,7 +3037,7 @@
 							<!-- ** Result organizer ** -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
 							<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-							<id root="122ed3ae-6d9e-43d0-bfa2-434ea34b1426"/>
+							<id root="122ed3ae-6d9e-43d0-bfa2-434ea34b1426-1"/>
 							<code code="166312007" displayName="Blood chemistry test" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
 							<statusCode code="active"/>
 							<effectiveTime>
@@ -3049,7 +3049,7 @@
 									<!-- ** Result observation ** -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
 									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-									<id root="aed821af-3330-4138-97f0-e84dfe5f3c35"/>
+									<id root="aed821af-3330-4138-97f0-e84dfe5f3c35-1"/>
 									<!--<code code="3094-0" displayName="Urea nitrogen, Serum" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/> -->
 									<code code="95971004" displayName="Urea nitrogen, Serum" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
 									<statusCode code="active"/>
@@ -3064,7 +3064,7 @@
 							<!-- ** Result organizer ** -->
 							<templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01"/>
 							<templateId root="2.16.840.1.113883.10.20.22.4.1"/>
-							<id root="122ed3ae-6d9e-43d0-bfa2-434ea34b1426"/>
+							<id root="122ed3ae-6d9e-43d0-bfa2-434ea34b1426-2"/>
 							<code code="166312007" displayName="Blood chemistry test" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
 							<statusCode code="active"/>
 							<effectiveTime>
@@ -3076,7 +3076,7 @@
 									<!-- ** Result observation ** -->
 									<templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01"/>
 									<templateId root="2.16.840.1.113883.10.20.22.4.2"/>
-									<id root="aed821af-3330-4138-97f0-e84dfe5f3c35"/>
+									<id root="aed821af-3330-4138-97f0-e84dfe5f3c35-2"/>
 									<!--<code code="3094-0" displayName="Urea nitrogen, Serum" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/> -->
 									<code code="95971004" displayName="Urea nitrogen, Serum" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"/>
 									<statusCode code="active"/>

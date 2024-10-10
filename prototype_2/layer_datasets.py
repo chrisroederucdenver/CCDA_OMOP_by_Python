@@ -134,7 +134,8 @@ def main():
     # EXPORT VARS
     export_person = omop_data_dict['Person']
     from foundry.transforms import Dataset
-    person = Dataset.get("person")
+    # person = Dataset.get("person")
+    person = Dataset.get("person_second_try")
     person.write_table(export_person)
 
 

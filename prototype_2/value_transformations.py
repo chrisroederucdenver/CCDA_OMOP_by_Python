@@ -32,7 +32,7 @@ def cast_as_concept_id(args_dict):  # TBD FIX CHRIS
     return ""
 
 
-def _map_to_omop_concept_row(vocabulary_oid, concept_code, default):
+def _map_to_omop_concept_row(vocabulary_oid, concept_code, default, column_name):
     """
     """
     try:
@@ -45,9 +45,11 @@ def _map_to_omop_concept_row(vocabulary_oid, concept_code, default):
 
         if len(concept_id_df) > 1:
            logger.warning(f"more than one  concept for \"{vocabulary_oid}\" \"{concept_code}\", chose the first")
-           return default
+        
+        if concept_id_df is None:
+            return default
 
-        return concept_id_df
+        return concept_id_df[column_name].iloc[0]
     except IndexError as e:
         logger.warning(f"no concept for \"{vocabulary_oid}\" \"{concept_code}\" type:{type(e)}")
         return default
@@ -56,19 +58,22 @@ def _map_to_omop_concept_row(vocabulary_oid, concept_code, default):
 def map_hl7_to_omop_concept_id(args_dict):
     """ expects: vocabulary_oid, concept_code
     """
-    return int(_map_to_omop_concept_row(args_dict['vocabulary_oid'], 
+    id_value = _map_to_omop_concept_row(args_dict['vocabulary_oid'], 
                                         args_dict['concept_code'],
-                                        args_dict['default'])\
-                                        ['concept_id'].iloc[0])
-
+                                        args_dict['default'], 
+                                        'concept_id')
+    if id_value is not None:
+        return int(id_value)
+    else:
+        return None
 
 def map_hl7_to_omop_domain_id(args_dict):
     """ expects: vocabulary_oid, concept_code
     """
     return _map_to_omop_concept_row(args_dict['vocabulary_oid'], 
                                     args_dict['concept_code'],
-                                    args_dict['default'])\
-                                    ['domain_id'].iloc[0]
+                                    args_dict['default'],
+                                    'domain_id')
 
 def extract_day_of_birth(args_dict):
     # assumes input is ISO-8601 "YYYY-MM-DD"

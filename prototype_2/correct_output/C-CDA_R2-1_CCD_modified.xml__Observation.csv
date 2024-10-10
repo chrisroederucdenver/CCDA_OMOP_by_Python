@@ -1,5 +1,5 @@
-observation_id,person_id,observation_concept_id,observation_date,observation_datetime,observation_type_concept_id,value_as_string,value_as_number,value_as_concept_id,unit_concept_id,provider_id,visit_occurence_id,visit_detail_id,observation_source_value,observation_source_concept_id,unit_source_value,qualifier_source_value
-aed821af-3330-4138-97f0-e84dfe5f3c35,808876122,3299517,2008-03-20 09:30,,,,123,,,,,,95971004,,,
-aed821af-3330-4138-97f0-e84dfe5f3c35,808876122,3299517,2008-03-20 09:30,,,,,3299517.0,,,,,95971004,,,
-aed821af-3330-4138-97f0-e84dfe5f3c35,808876122,3299517,2008-03-20 09:30,,,,123,,,,,,95971004,,,
-aed821af-3330-4138-97f0-e84dfe5f3c35,808876122,3299517,2008-03-20 09:30,,,,,3299517.0,,,,,95971004,,,
+observation_id,person_id,observation_concept_id,observation_date,observation_datetime,value_as_string,observation_type_concept_id,value_as_number,value_as_concept_id,unit_concept_id,provider_id,visit_occurence_id,visit_detail_id,observation_source_value,observation_source_concept_id,unit_source_value,qualifier_source_value
+aed821af-3330-4138-97f0-e84dfe5f3c35-1,808876122,3299517,2008-03-20 09:30,,,32035,123,0,,,,,95971004,,,
+aed821af-3330-4138-97f0-e84dfe5f3c35-2,808876122,3299517,2008-03-20 09:30,,,32035,,3299517,,,,,95971004,,,
+aed821af-3330-4138-97f0-e84dfe5f3c35-1,808876122,3299517,2008-03-20 09:30,,,32035,123,0,,,,,95971004,,,
+aed821af-3330-4138-97f0-e84dfe5f3c35-2,808876122,3299517,2008-03-20 09:30,,,32035,,3299517,,,,,95971004,,,

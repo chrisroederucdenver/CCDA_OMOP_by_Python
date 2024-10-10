@@ -6,7 +6,7 @@ metadata = {
     	# person nor patientRole have templateIDs
     	'root': {
     	    'config_type': 'ROOT',
-    	    'element': "./recordTarget/patientRole"
+    	    'element': "./hl7:recordTarget/hl7:patientRole"
     	},
 
         # Institution/file specific ROOT OIDs for person id named after the file in which they were discovered.
@@ -16,35 +16,35 @@ metadata = {
     	'person_id_anna_flux': {
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.3.651.2.1"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.3.651.2.1"]',
     	    'attribute': "extension",
             'priority': ('person_id', 1)
     	},
     	'person_id_patient_170': {
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.3.6132"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.3.6132"]',
     	    'attribute': "extension",
             'priority': ('person_id', 2)
     	},
     	'person_id_patient_502': {
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.19.5.99999.2"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.19.5.99999.2"]',
     	    'attribute': "extension",
             'priority': ('person_id', 3)
     	},
     	'person_id_patient_healthconnectak': {
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.3.564.14977"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.3.564.14977"]',
     	    'attribute': "extension",
             'priority': ('person_id', 4)
     	},
     	'person_id_patient_bennis_shauna': { # same OID as for eHx_Terry
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.3.7732.100"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.3.7732.100"]',
     	    'attribute': "extension",
             'priority': ('person_id', 5)
     	},
@@ -52,14 +52,14 @@ metadata = {
     	'person_id_ssn': {
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.4.1"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.4.1"]',
     	    'attribute': "extension",
             'priority': ('person_id', 103)
     	},
     	'person_id_npi': {
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id[@root="2.16.840.1.113883.4.6"]',
+    	    'element': 'hl7:id[@root="2.16.840.1.113883.4.6"]',
     	    'attribute': "extension",
             'priority': ('person_id', 104) # (final field name, priority number)
     	},
@@ -67,7 +67,7 @@ metadata = {
             # if others fail b/c they specify roots not used, just grab an extension
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id',
+    	    'element': 'hl7:id',
     	    'attribute': "extension",
             'priority': ('person_id', 105)
     	},
@@ -75,7 +75,7 @@ metadata = {
             # if the  extension_catchall fails b/c there is no extension attribute, try just the root
     	    'config_type': 'FIELD',
             'data_type': 'INTEGERHASH',
-    	    'element': 'id',
+    	    'element': 'hl7:id',
     	    'attribute': "root",
             'priority': ('person_id', 106)
     	},
@@ -88,43 +88,43 @@ metadata = {
         # not for output, but to support person_id_hash creation
         'family_name': {
     	    'config_type': 'FIELD',
-    	    'element': './recordTarget/patientRole/name/family',
+    	    'element': './hl7:recordTarget/hl7:patientRole/hl7:name/hl7:family',
     	    'attribute': "#text"
     	},
         'given_name': {
     	    'config_type': 'FIELD',
-    	    'element': './recordTarget/patientRole/name/given',
+    	    'element': './hl7:recordTarget/hl7:patientRole/hl7:name/hl7:given',
     	    'attribute': "#text"
     	},
         'street_address': {
     	    'config_type': 'FIELD',
-    	    'element': './recordTarget/patientRole/addr/streetAddressLine',
+    	    'element': './hl7:recordTarget/hl7:patientRole/hl7:addr/hl7:streetAddressLine',
     	    'attribute': "#text"
     	},
         'city': {
     	    'config_type': 'FIELD',
-    	    'element': './recordTarget/patientRole/addr/city',
+    	    'element': './hl7:recordTarget/hl7:patientRole/hl7:addr/hl7:city',
     	    'attribute': "#text"
     	},
         'country': {
     	    'config_type': 'FIELD',
-    	    'element': './recordTarget/patientRole/addr/country',
+    	    'element': './hl7:recordTarget/hl7:patientRole/hl7:addr/hl7:country',
     	    'attribute': "#text"
     	},
         'postal_code': {
     	    'config_type': 'FIELD',
-    	    'element': './recordTarget/patientRole/addr/postalCode',
+    	    'element': './hl7:recordTarget/hl7:patientRole/hl7:addr/hl7:postalCode',
     	    'attribute': "#text"
     	},
 
     	'gender_concept_code': {
     	    'config_type': 'FIELD',
-    	    'element': "patient/administrativeGenderCode",
+    	    'element': "hl7:patient/hl7:administrativeGenderCode",
     	    'attribute': "code"
     	},
     	'gender_concept_codeSystem': {
     	    'config_type': 'FIELD',
-    	    'element': "patient/administrativeGenderCode",
+    	    'element': "hl7:patient/hl7:administrativeGenderCode",
     	    'attribute': "codeSystem"
     	},
     	'gender_concept_id': {
@@ -133,7 +133,7 @@ metadata = {
     	    'argument_names': {
     		    'concept_code': 'gender_concept_code',
     		    'vocabulary_oid': 'gender_concept_codeSystem',
-                'default': (8551, 'default') # unkown
+                'default': 8551 # unkown
     	    },
             'order': 2
     	},
@@ -165,7 +165,7 @@ metadata = {
     	'birth_datetime': {
     	    'config_type': 'FIELD',
             'data_type':'DATE',
-    	    'element': "patient/birthTime",
+    	    'element': "hl7:patient/hl7:birthTime",
     	    'attribute': "value",
             'order': 6
     	},
@@ -173,12 +173,12 @@ metadata = {
 
     	'race_concept_code': {
     	    'config_type': 'FIELD',
-    	    'element': "patient/raceCode",
+    	    'element': "hl7:patient/hl7:raceCode",
     	    'attribute': "code"
     	},
     	'race_concept_codeSystem': {
     	    'config_type': 'FIELD',
-    	    'element': "patient/raceCode",
+    	    'element': "hl7:patient/hl7:raceCode",
     	    'attribute': "codeSystem"
     	},
     	'race_concept_id':{
@@ -187,19 +187,19 @@ metadata = {
     	    'argument_names': {
     		    'concept_code': 'race_concept_code',
     		    'vocabulary_oid': 'race_concept_codeSystem',
-                'default': (0,'default')
+                'default': 0
     	    },
             'order': 7
     	},
 
     	'ethnicity_concept_code': {
     	    'config_type': 'FIELD',
-    	    'element': "patient/ethnicGroupCode",
+    	    'element': "hl7:patient/hl7:ethnicGroupCode",
     	    'attribute': "code"
     	},
     	'ethnicity_concept_codeSystem': {
     	    'config_type': 'FIELD',
-    	    'element': "patient/ethnicGroupCode",
+    	    'element': "hl7:patient/hl7:ethnicGroupCode",
     	    'attribute': "codeSystem"
     	},
     	'ethnicity_concept_id': {
@@ -208,7 +208,7 @@ metadata = {
     	    'argument_names': {
     		    'concept_code': 'ethnicity_concept_code',
     		    'vocabulary_oid': 'ethnicity_concept_codeSystem',
-                'default': (0,'default')
+                'default': 0
     	    },
             'order': 8
     	},
@@ -228,6 +228,6 @@ metadata = {
         'race_source_concept_id': { 'config_type': None, 'order': 16 },
         'ethnicity_source_value': { 'config_type': None, 'order': 17 },
         'ethnicity_source_concept_id': { 'config_type': None, 'order': 18 }
- 
+
     }
 }

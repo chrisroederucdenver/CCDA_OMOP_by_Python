@@ -1,5 +1,1 @@
-observation_id,person_id,observation_concept_id,observation_date,observation_datetime,observation_type_concept_id,value_as_string,value_as_number,value_as_concept_id,unit_concept_id,provider_id,visit_occurence_id,visit_detail_id,observation_source_value,observation_source_concept_id,unit_source_value,qualifier_source_value
-107c2dc0-67a5-11db-bd13-0800200c9a66,1077769128,,2010-04-14 10:00,,,,55,,,,,,14646-4,,,
-107c2dc0-67a5-11db-bd13-0800200c9a66,1077769128,,2010-04-14 10:00,,,,153,,,,,,2089-1,,,
-107c2dc0-67a5-11db-bd13-0800200c9a66,1077769128,,2010-04-14 10:00,,,,240,,,,,,2093-3,,,
-107c2dc0-67a5-11db-bd13-0800200c9a66,1077769128,,2010-04-14 10:00,,,,160,,,,,,12951-0,,,
+

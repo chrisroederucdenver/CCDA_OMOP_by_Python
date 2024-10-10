@@ -1,8 +1,8 @@
-measurement_id,person_id,measurement_concept_id,measurement_date,measurement_datetime,measurement_time,measurement_type_concept_id,operator_concept_id,value_as_number,unit_concept_id,provider_id,visit_occurrence_id,visit_detail_id,measurement_source_value,measurement_source_concept_id,unit_source_value,value_source_value
-298019435,139937725,3009201,2012-11-26,,,,,6,,,,,3016-3,,,6
-298019435,139937725,3004410,2012-11-26,,,,,8,,,,,4548-4,,,8
-298019435,139937725,3016723,2012-11-26,,,,,1.5,,,,,2160-0,,,1.5
-298019435,139937725,3022217,2012-11-26,,,,,1.5,,,,,6301-6,,,1.5
-298019435,139937725,3015022,2012-11-26,,,,,55,,,,,18041-4,,,55
-298019435,139937725,3020064,2012-11-26,,,,,1.5,,,,,18089-3,,,1.5
-298019435,139937725,3004451,2012-11-26,,,,,,,,,,18844-1,,,"EKG rate 60s, A fib, LBBB"
+measurement_id,person_id,measurement_concept_id,measurement_date,measurement_datetime,measurement_time,measurement_type_concept_id,operator_concept_id,value_as_number,value_as_concept_id,unit_concept_id,range_low,range_high,provider_id,visit_occurrence_id,visit_detail_id,measurement_source_value,measurement_source_concept_id,unit_source_value,value_source_value
+298019435,139937725,3009201,2012-11-26,,,32035,,6,0,,,,,,,3016-3,,,6
+298019435,139937725,3004410,2012-11-26,,,32035,,8,0,,,,,,,4548-4,,,8
+298019435,139937725,3016723,2012-11-26,,,32035,,1.5,0,,,,,,,2160-0,,,1.5
+298019435,139937725,3022217,2012-11-26,,,32035,,1.5,0,,,,,,,6301-6,,,1.5
+298019435,139937725,3015022,2012-11-26,,,32035,,55,0,,,,,,,18041-4,,,55
+298019435,139937725,3020064,2012-11-26,,,32035,,1.5,0,,,,,,,18089-3,,,1.5
+298019435,139937725,3004451,2012-11-26,,,32035,,0,0,,,,,,,18844-1,,,"EKG rate 60s, A fib, LBBB"

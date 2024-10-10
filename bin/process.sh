@@ -5,7 +5,7 @@
 # mamba install -y -q lxml
 # mamba install -y -q duckdb
 # mamba install -y -q pandas 
-mamba activate default
+
 
 # 2 python repl command from "packages" here in Jupyter (doesn't work)
 # !maestro env pip install lxml==5.2.2

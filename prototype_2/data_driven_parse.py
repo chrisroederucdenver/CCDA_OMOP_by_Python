@@ -30,14 +30,16 @@ import sys
 import hashlib
 import zlib
 import ctypes
+import traceback
 from lxml import etree as ET
 from prototype_2.metadata import get_meta_dict
+from lxml.etree import XPathEvalError 
 
 logger = logging.getLogger(__name__)
 
 
 ns = {
-   '': 'urn:hl7-org:v3',  # default namespace
+   # '': 'urn:hl7-org:v3',  # default namespace
    'hl7': 'urn:hl7-org:v3',
    'xsi': 'http://www.w3.org/2001/XMLSchema-instance',
    'sdtc': 'urn:hl7-org:sdtc'
@@ -86,10 +88,16 @@ def parse_field_from_dict(field_details_dict, domain_root_element, domain, field
         return None
 
     logger.info(f"    FIELD {field_details_dict['element']} for {domain}/{field_tag}")
-    field_element = domain_root_element.find(field_details_dict['element'], ns)
+    #field_element = domain_root_element.find(field_details_dict['element'], ns)
+    field_element = None
+    try:
+        field_element = domain_root_element.xpath(field_details_dict['element'], namespaces=ns)
+    except XPathEvalError as pee:
+        pass # I know
+        #print(f"FAILED on  {field_details_dict['element']}")
     if field_element is None:
         logger.error((f"FIELD could not find field element {field_details_dict['element']}"
-                      f" for {domain}/{field_tag} root:{root_path}"))
+                      f" for {domain}/{field_tag} root:{root_path} {field_details_dict} "))
         return None
 
     if 'attribute' not in field_details_dict:
@@ -99,10 +107,21 @@ def parse_field_from_dict(field_details_dict, domain_root_element, domain, field
 
     logger.info((f"       ATTRIBUTE   {field_details_dict['attribute']} "
                  f"for {domain}/{field_tag} {field_details_dict['element']} "))
-    attribute_value = field_element.get(field_details_dict['attribute'])
-    if field_details_dict['attribute'] == "#text":
-        attribute_value = field_element.text
-    if attribute_value is None:
+    attribute_value = None
+    if len(field_element) > 0:
+        attribute_value = field_element[0].get(field_details_dict['attribute'])
+        if field_details_dict['attribute'] == "#text":
+            try:
+                attribute_value = field_element.text
+            except Exception as e:
+                print((f"ERROR: no text elemeent for field element {field_element} "
+                        f"for {domain}/{field_tag} root:{root_path}"))
+                logger.error((f"no text elemeent for field element {field_element} "
+                        f"for {domain}/{field_tag} root:{root_path}"))
+        if attribute_value is None:
+            logger.warning((f"no value for field element {field_details_dict['element']} "
+                        f"for {domain}/{field_tag} root:{root_path}"))
+    else:
         logger.warning((f"no value for field element {field_details_dict['element']} "
                         f"for {domain}/{field_tag} root:{root_path}"))
 
@@ -210,10 +229,12 @@ def do_derived_fields(output_dict, root_element, root_path, domain,  domain_meta
                                       f"find {field_name} in {output_dict}"))
                     try:
                         args_dict[arg_name] = output_dict[field_name][0]
-                    except Exception:
+                    except Exception as e:
+                        print(traceback.format_exc(e))
                         error_fields_set.add(field_tag)
                         logger.error((f"DERIVED {field_tag} arg_name: {arg_name} field_name:{field_name}"
                                       f" args_dict:{args_dict} output_dict:{output_dict}"))
+                        logger.error(f"DERIVED exception {e}")
 
             try:
                 function_value = field_details_dict['FUNCTION'](args_dict)
@@ -221,11 +242,13 @@ def do_derived_fields(output_dict, root_element, root_path, domain,  domain_meta
                 logger.info((f"     DERIVED {function_value} for "
                                 f"{field_tag}, {field_details_dict} {output_dict[field_tag]}"))
             except KeyError as e:
+                print(traceback.format_exc(e))
                 error_fields_set.add(field_tag)
                 logger.error(f"DERIVED exception: {e}")
                 logger.error(f"DERIVED KeyError {field_tag} function can't find key it expects in {args_dict}")
                 output_dict[field_tag] = (None, field_details_dict['config_type'])
             except TypeError as e:
+                print(traceback.format_exc(e))
                 error_fields_set.add(field_tag)
                 logger.error(f"DERIVED exception: {e}")
                 logger.error((f"DERIVED TypeError {field_tag} possibly calling something that isn't a function"
@@ -355,7 +378,7 @@ def get_extract_order_fn(dict):
             logger.info(f"{field_key} {dict[field_key]['order']}")
             return int(dict[field_key]['order'])
         else:
-            logger.warning(f"extract_order_fn, no order in {field_key}")
+            logger.info(f"extract_order_fn, no order in {field_key}")
             return int(sys.maxsize)
 
     return get_order_from_dict
@@ -405,7 +428,7 @@ def parse_domain_for_single_root(root_element, root_path, domain, domain_meta_di
     domain_id = do_domain_fields(output_dict, root_element, root_path, domain,  domain_meta_dict, error_fields_set)
     do_hash_fields(output_dict, root_element, root_path, domain,  domain_meta_dict, error_fields_set)
     priority_field_names = do_priority_fields(output_dict, root_element, root_path, domain,  domain_meta_dict, error_fields_set, pk_dict)
-
+    
     output_dict = sort_output_dict(output_dict, domain_meta_dict, domain)
 
     if (domain == domain_id or domain_id is None):
@@ -446,7 +469,8 @@ def parse_domain_from_dict(tree, domain, domain_meta_dict, filename, pk_dict):
     root_path = domain_meta_dict['root']['element']
     logger.info((f"DOMAIN >>  domain:{domain} root:{domain_meta_dict['root']['element']}"
                  f"   ROOT path:{root_path}"))
-    root_element_list = tree.findall(domain_meta_dict['root']['element'], ns)
+    #root_element_list = tree.findall(domain_meta_dict['root']['element'], ns)
+    root_element_list = tree.xpath(domain_meta_dict['root']['element'], namespaces=ns)
     if root_element_list is None or len(root_element_list) == 0:
         logger.error((f"DOMAIN couldn't find root element for {domain}"
                       f" with {domain_meta_dict['root']['element']}"))

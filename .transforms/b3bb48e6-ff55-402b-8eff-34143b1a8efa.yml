@@ -12,7 +12,7 @@ runtime:
     command: "/opt/palantir/transforms.d/run-ipynb.sh"
     filePath: "resources/Untitled.ipynb"
     envVars:
-      ENABLE_MANAGED_CONDA_ENVIRONMENTS: "false"
+      ENABLE_MANAGED_CONDA_ENVIRONMENTS: "true"
       ENABLE_MANAGED_CRAN_ENVIRONMENTS: "false"
       ENABLE_WRITE_BRANCH_PREFIX: "false"
       UPLOAD_CODE_CHECKPOINTS: "true"

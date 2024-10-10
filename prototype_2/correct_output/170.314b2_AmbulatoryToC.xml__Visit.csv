@@ -1,2 +1,2 @@
-visit_occurrence_id,person_id,visit_concept_id,visit_start_date,visit_start_datetime,visit_end_date,visit_end_datetime,visit_type_concept_id,provider_id,care_site_id,visit_detail_source_value,visit_detail_source_concept_id,admitting_source_value,admitting_source_concept_id,discharge_to_source_value,discharge_to_source_concept_id,preceding_visit_occurrence_id
-5283815,939546828,,2012-08-15,,2012-08-15,,,91138,,,,,,,,
+visit_occurrence_id,person_id,visit_concept_id,visit_start_date,visit_start_datetime,visit_end_date,visit_end_datetime,visit_type_concept_id,provider_id,care_site_id,visit_source_value,visit_source_concept_id,admitting_source_concept_id,admitting_source_value,discharge_to_source_concept_id,discharge_to_source_value,preceding_visit_occurrence_id
+2a620155-9d11-439e-92b3-5d9815ff4de8,939546828,0,2012-08-15,,,,32035,2.16.840.1.113883.4.6,,,,,,,,

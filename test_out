@@ -1,0 +1,1283 @@
+***** MAIN INIT ******
+PROCESSING resources/C-CDA_R2-1_CCD_modified.xml 
+NUM ROOTS Person 1
+NUM ROOTS Measurement 14
+NUM ROOTS Observation 14
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+  ROOT for domain:Observation, we have tag:{urn:hl7-org:v3}observation attributes:{'classCode': 'OBS', 'moodCode': 'EVN'}
+
+
+DOMAIN: Person
+    FIELD:person_id
+        VALUE:808876122
+        PATH:./recordTarget/patientRole/id[@root="2.16.840.1.113883.4.1"]/@extension
+        ORDER: 1
+    FIELD:gender_concept_id
+        VALUE:8532
+        PATH:DERIVED
+        ORDER: 2
+    FIELD:year_of_birth
+        VALUE:1975
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:month_of_birth
+        VALUE:05
+        PATH:DERIVED
+        ORDER: 4
+    FIELD:day_of_birth
+        VALUE:01
+        PATH:DERIVED
+        ORDER: 5
+    FIELD:birth_datetime
+        VALUE:1975-05-01
+        PATH:./recordTarget/patientRole/patient/birthTime/@value
+        ORDER: 6
+    FIELD:race_concept_id
+        VALUE:8527
+        PATH:DERIVED
+        ORDER: 7
+    FIELD:ethnicity_concept_id
+        VALUE:38003564
+        PATH:DERIVED
+        ORDER: 8
+    FIELD:location_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 9
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 10
+    FIELD:care_site_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:person_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:gender_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:gender_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:race_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 15
+    FIELD:race_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:ethnicity_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 17
+    FIELD:ethnicity_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+
+
+DOMAIN: Person 18
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3000963
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:13.2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:718-7
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:13.2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3000905
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:6.7
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:6690-2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:6.7
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3024929
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:123
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:777-3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:123
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3023314
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:35.3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:4544-3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:35.3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3020416
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:4.21
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:789-8
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:4.21
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3000963
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:13.2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:718-7
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:13.2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3000905
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:6.7
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:6690-2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:6.7
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3024929
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:123
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:777-3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:123
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3023314
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:35.3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:4544-3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:35.3
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Measurement
+    FIELD:measurement_id
+        VALUE:298019435
+        PATH:HASH
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:measurement_concept_id
+        VALUE:3020416
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:measurement_date
+        VALUE:2008-03-19 08:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:measurement_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:measurement_time
+        VALUE:None
+        PATH:(None type)
+        ORDER: 6
+    FIELD:measurement_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:operator_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:4.21
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 9
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:(None type)
+        ORDER: 10
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:range_low
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:range_high
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 14
+    FIELD:visit_occurrence_id
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/no element/no attribute/
+        ORDER: 15
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:measurement_source_value
+        VALUE:789-8
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 17
+    FIELD:measurement_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 18
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 19
+    FIELD:value_source_value
+        VALUE:4.21
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 20
+
+
+DOMAIN: Measurement 20
+
+
+
+
+DOMAIN: Observation
+    FIELD:observation_id
+        VALUE:aed821af-3330-4138-97f0-e84dfe5f3c35-1
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/id/@root
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:observation_concept_id
+        VALUE:3299517
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:observation_date
+        VALUE:2008-03-20 09:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:observation_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:value_as_string
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="ST"]/@#text
+        ORDER: 7
+    FIELD:observation_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:123
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 8
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:DERIVED
+        ORDER: 9
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 10
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:visit_occurence_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:observation_source_value
+        VALUE:95971004
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 14
+    FIELD:observation_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 15
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:qualifier_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 17
+
+
+DOMAIN: Observation 17
+
+
+
+
+DOMAIN: Observation
+    FIELD:observation_id
+        VALUE:aed821af-3330-4138-97f0-e84dfe5f3c35-2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/id/@root
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:observation_concept_id
+        VALUE:3299517
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:observation_date
+        VALUE:2008-03-20 09:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:observation_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:value_as_string
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="ST"]/@#text
+        ORDER: 7
+    FIELD:observation_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 8
+    FIELD:value_as_concept_id
+        VALUE:3299517
+        PATH:DERIVED
+        ORDER: 9
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 10
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:visit_occurence_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:observation_source_value
+        VALUE:95971004
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 14
+    FIELD:observation_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 15
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:qualifier_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 17
+
+
+DOMAIN: Observation 17
+
+
+
+
+DOMAIN: Observation
+    FIELD:observation_id
+        VALUE:aed821af-3330-4138-97f0-e84dfe5f3c35-1
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/id/@root
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:observation_concept_id
+        VALUE:3299517
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:observation_date
+        VALUE:2008-03-20 09:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:observation_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:value_as_string
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="ST"]/@#text
+        ORDER: 7
+    FIELD:observation_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:123
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 8
+    FIELD:value_as_concept_id
+        VALUE:0
+        PATH:DERIVED
+        ORDER: 9
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 10
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:visit_occurence_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:observation_source_value
+        VALUE:95971004
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 14
+    FIELD:observation_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 15
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:qualifier_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 17
+
+
+DOMAIN: Observation 17
+
+
+
+
+DOMAIN: Observation
+    FIELD:observation_id
+        VALUE:aed821af-3330-4138-97f0-e84dfe5f3c35-2
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/id/@root
+        ORDER: 1
+    FIELD:person_id
+        VALUE:808876122
+        PATH:FK
+        ORDER: 2
+    FIELD:observation_concept_id
+        VALUE:3299517
+        PATH:DERIVED
+        ORDER: 3
+    FIELD:observation_date
+        VALUE:2008-03-20 09:30
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/effectiveTime/@value
+        ORDER: 4
+    FIELD:observation_datetime
+        VALUE:None
+        PATH:(None type)
+        ORDER: 5
+    FIELD:value_as_string
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="ST"]/@#text
+        ORDER: 7
+    FIELD:observation_type_concept_id
+        VALUE:32035
+        PATH:(None type)
+        ORDER: 8
+    FIELD:value_as_number
+        VALUE:None
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/value[@{http://www.w3.org/2001/XMLSchema-instance}type="PQ"]/@value
+        ORDER: 8
+    FIELD:value_as_concept_id
+        VALUE:3299517
+        PATH:DERIVED
+        ORDER: 9
+    FIELD:unit_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 10
+    FIELD:provider_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 11
+    FIELD:visit_occurence_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 12
+    FIELD:visit_detail_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 13
+    FIELD:observation_source_value
+        VALUE:95971004
+        PATH:./component/structuredBody/component/section/templateId[@root='2.16.840.1.113883.10.20.22.2.3.1']/../entry/organizer/component/observation/code/@code
+        ORDER: 14
+    FIELD:observation_source_concept_id
+        VALUE:None
+        PATH:(None type)
+        ORDER: 15
+    FIELD:unit_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 16
+    FIELD:qualifier_source_value
+        VALUE:None
+        PATH:(None type)
+        ORDER: 17
+
+
+DOMAIN: Observation 17
+
+

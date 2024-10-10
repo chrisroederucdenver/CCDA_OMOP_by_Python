@@ -1,6 +1,3 @@
-# vim backup files
-*~
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -159,6 +156,3 @@ model.ckpt*
 *.tar.gz
 *.xlsx
 *.zip
-logs/*
-output/*
-prototype_2/__pycache__/*
